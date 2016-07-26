@@ -1,0 +1,26 @@
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li { display: inline-block; }
+
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+$color1 : #00f;
+$color2 : #f00;
+ h1 {
+    color: $color2;
+    padding: 0.5em;
+}
+h2 {
+    color: $color2;
+    padding: 0;
+}
