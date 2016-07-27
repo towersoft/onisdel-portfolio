@@ -1,26 +1,90 @@
-nav {
-  ul {
-    margin: 0;
-    padding: 0;
+$red: #bd0011;
+$color2: #f00;
+.clearfix {
+  clear: both;
+}
+
+body {
+  max-width: 1170px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.portafolio {
+  .headerSection {
+    border-bottom: 1px solid #000;
+    margin: 20px 0;
+    h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .menu {
     list-style: none;
+    vertical-align: middle;
+    -webkit-padding-start: 0;
+    margin-top: 10px;
+    li:last-child {
+      margin-right: 0;
+    }
+    li {
+      display: inline;
+      margin-right: 20px;
+      a {
+        color: $red;
+      }
+      a:focus,
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .profile {
+    img {
+      max-width: 80px;
+      max-height: 80px;
+      margin: 0 0 10px;
+      border-radius: 50%;
+      border: 3px solid rgba(0,0,0,.2);
+      box-sizing: content-box;
+    }
   }
 
-  li { display: inline-block; }
+  .sectionTitle {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 0 20px;
+  }
+  .sectionText {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px;
 
-  a {
-    display: block;
-    padding: 6px 12px;
-    text-decoration: none;
+    label {
+      font-weight: normal;
+      margin: 0;
+      display: inline;
+    }
+    a {
+      font-weight: normal;
+      margin: 0;
+      display: inline-block;
+    }
+  }
+  .skills{
+    text-align: center;
   }
 }
 
-$color1 : #00f;
-$color2 : #f00;
- h1 {
-    color: $color2;
-    padding: 0.5em;
-}
-h2 {
-    color: $color2;
-    padding: 0;
+@media (min-width: 768px) {
+  .headerSection {
+    .menu {
+      text-align: right;
+      margin-top: 0;
+    }
+  }
 }
