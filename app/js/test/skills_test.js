@@ -1,7 +1,8 @@
 'use strict';
 
 describe('SkillsController', function() {
-    beforeEach(module('portafolio'));
+    beforeEach(module('portafolio.skills'));
+    beforeEach(module('portafolio.services'));
 
     var $controller;
 
@@ -10,10 +11,10 @@ describe('SkillsController', function() {
         $controller = _$controller_;
     }));
 
-    describe('test', function() {
-        it('test controller is defined', function() {
-            var $scope = {};
-            var controller = $controller(SkillsController, { $scope: $scope });
+    describe('unit test', function() {
+        it('controller is defined', function() {
+            var vm = {};
+            var controller = $controller('SkillsController', { vm: vm });
             expect(controller).toBeDefined();
         });
     });

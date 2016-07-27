@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("portafolio").controller('HeaderController', HeaderController);
+angular.module("portafolio.header",[]).controller('HeaderController', HeaderController);
 function HeaderController() {
     var vm = this;
 }

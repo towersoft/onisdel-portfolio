@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("portafolio").controller('ContactController', ContactController);
+angular.module("portafolio.contacts",[]).controller('ContactController', ContactController);
 ContactController.$inject = ['DataService'];
 function ContactController(DataService) {
 

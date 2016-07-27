@@ -11,7 +11,7 @@ module.exports = function (config) {
             'js/**/*.js'
         ],
         exclude: [
-            'js/services/service.js'
+            'js/test/ser*.js'
         ],
         autoWatch: true,
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("portafolio").controller('SkillsController', SkillsController);
+angular.module("portafolio.skills",[]).controller('SkillsController', SkillsController);
 SkillsController.$inject = ['DataService'];
 function SkillsController(DataService) {
     var vm = this;

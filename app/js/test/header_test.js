@@ -1,7 +1,7 @@
 'use strict';
 
 describe('HeaderController', function() {
-    beforeEach(module('portafolio'));
+    beforeEach(module('portafolio.header'));
 
     var $controller;
 
@@ -10,9 +10,10 @@ describe('HeaderController', function() {
         $controller = _$controller_;
     }));
 
-    describe('test', function() {
-        it('test controller is defined', function() {
-            var controller = $controller(HeaderController);
+    describe('unit test', function() {
+        it('controller is defined', function() {
+            var vm = {};
+            var controller = $controller('HeaderController', { vm: vm });
             expect(controller).toBeDefined();
         });
     });

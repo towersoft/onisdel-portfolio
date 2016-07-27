@@ -1,7 +1,8 @@
 'use strict';
 
 describe('ContactController', function() {
-    beforeEach(module('portafolio'));
+    beforeEach(module('portafolio.contacts'));
+    beforeEach(module('portafolio.services'));
 
     var $controller;
 
@@ -10,12 +11,30 @@ describe('ContactController', function() {
         $controller = _$controller_;
     }));
 
-    describe('test', function() {
-        it('test controller is defined', function() {
-            var $scope = {};
-            var controller = $controller(ContactController, { $scope: $scope });
-            controller.loadData();
-            expect(controller).toBeDefined();
+    describe('unit test', function() {
+        it('controller is defined', function() {
+            var vm = {};
+            var controller = $controller('ContactController', { vm: vm });
+            vm.contacts = [{name: 'a'}];
+            expect(vm.contacts.length).toEqual(1);
         });
+
     });
+
+
 });
+
+//describe('portafolio.contact module', function() {
+//
+//    beforeEach(module('portafolio.contact'));
+//
+//    describe('view1 controller', function(){
+//
+//        it('should ....', inject(function($controller) {
+//            //spec body
+//            var view1Ctrl = $controller('ContactController');
+//            expect(view1Ctrl).toBeDefined();
+//        }));
+//
+//    });
+//});

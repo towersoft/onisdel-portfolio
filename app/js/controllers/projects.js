@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("portafolio").controller('ProjectsController', ProjectsController);
+angular.module("portafolio.projects",[]).controller('ProjectsController', ProjectsController);
 ProjectsController.$inject = ['DataService'];
 function ProjectsController(DataService) {
     var vm = this;

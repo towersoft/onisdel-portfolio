@@ -1,7 +1,8 @@
 'use strict';
 
 describe('ProjectsController', function() {
-    beforeEach(module('portafolio'));
+    beforeEach(module('portafolio.projects'));
+    beforeEach(module('portafolio.services'));
 
     var $controller;
 
@@ -10,10 +11,10 @@ describe('ProjectsController', function() {
         $controller = _$controller_;
     }));
 
-    describe('test', function() {
-        it('test controller is defined', function() {
-            var $scope = {};
-            var controller = $controller(ProjectsController, { $scope: $scope });
+    describe('unit test', function() {
+        it('controller is defined', function() {
+            var vm = {};
+            var controller = $controller('ProjectsController', { vm: vm });
             expect(controller).toBeDefined();
         });
     });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('portafolio').factory('DataService', DataService);
+angular.module('portafolio.services', []).factory('DataService', DataService);
 DataService.$inject = ['$http'];
 function DataService($http) {
     var service = {
