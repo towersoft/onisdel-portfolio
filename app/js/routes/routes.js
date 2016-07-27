@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module("portafolio",["ngRoute"]).config(config);
+angular.module("portafolio").config(config);
 function config($routeProvider, $locationProvider) {
     $locationProvider.hashPrefix('!');
    // $locationProvider.html5Mode({

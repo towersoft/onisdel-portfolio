@@ -1,2 +1,4 @@
 'use strict';
-angular.module('portafolio', []);
+angular.module('portafolio', [
+    'ngRoute'
+]);

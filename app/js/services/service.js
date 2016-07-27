@@ -3,7 +3,6 @@
 angular.module('portafolio').factory('DataService', DataService);
 DataService.$inject = ['$http'];
 function DataService($http) {
-    debugger;
     var service = {
         loadData: loadData
     };

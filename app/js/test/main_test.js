@@ -12,8 +12,7 @@ describe('HeaderController', function() {
 
     describe('test', function() {
         it('test controller is defined', function() {
-            var $scope = {};
-            var controller = $controller(HeaderController, { $scope: $scope });
+            var controller = $controller(HeaderController);
             expect(controller).toBeDefined();
         });
     });
