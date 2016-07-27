@@ -1,30 +1,35 @@
 //jshint strict: false
-module.exports = function(config) {
-  config.set({
+module.exports = function (config) {
+    config.set({
 
-    basePath: './app',
+        basePath: './app',
 
-    files: [
-      'js/test/*.js'
-    ],
+        files: [
+            'lib/angular/angular.js',
+            'lib/angular-route/angular-route.js',
+            'lib/angular-mocks/angular-mocks.js',
+            'js/**/*.js'
+        ],
+        exclude: [
+            'js/services/service.js'
+        ],
+        autoWatch: true,
 
-    autoWatch: true,
+        frameworks: ['jasmine'],
 
-    frameworks: ['jasmine'],
+        browsers: ['Chrome'],
 
-    browsers: ['Chrome'],
+        plugins: [
+            'karma-chrome-launcher',
+            'karma-firefox-launcher',
+            'karma-jasmine',
+            'karma-junit-reporter'
+        ],
 
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-jasmine',
-      'karma-junit-reporter'
-    ],
+        junitReporter: {
+            outputFile: 'test_out/unit.xml',
+            suite: 'unit'
+        }
 
-    junitReporter: {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
-    }
-
-  });
+    });
 };

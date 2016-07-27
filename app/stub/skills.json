@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Javascript",
+    "level": "Level: 8"
+  },
+  {
+    "name": "PHP",
+    "level": "Level: 7"
+  },
+  {
+    "name": "Java",
+    "level": "Level: 8"
+  },
+  {
+    "name": "Bootstrap",
+    "level": "Level: 8"
+  },
+  {
+    "name": "CSS",
+    "level": "Level: 8"
+  },
+  {
+    "name": "Angular",
+    "level": "Level: 7"
+  },
+  {
+    "name": "Dojo",
+    "level": "Level: 7"
+  },
+  {
+    "name": "Nodejs",
+    "level": "Level: 7"
+  },
+  {
+    "name": "MongoDB",
+    "level": "Level: 7"
+  },
+  {
+    "name": "SQL Server",
+    "level": "Level: 8"
+  },
+  {
+    "name": "MySQL",
+    "level": "Level: 8"
+  }
+]

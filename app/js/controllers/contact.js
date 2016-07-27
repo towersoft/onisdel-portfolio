@@ -5,26 +5,19 @@ ContactController.$inject = ['DataService'];
 function ContactController(DataService) {
 
     var vm = this;
-    vm.data = {};
-    vm.loadData = loadData;
+    vm.contacts = {};
+    vm.loadContacts = loadContacts;
 
-    loadData();
-    function loadData() {
-        DataService.loadData()
-            .then(function (profile) {
-                vm.data = profile;
-                console.log('data: ', profile)
-            })
-            .catch(getDataFailed);
-
+    function loadContacts() {
+        DataService.loadContacts()
+            .then(getDataComplete);
     }
 
-    function getDataComplete(response) {
-
-
+    function getDataComplete(contacts) {
+        if (contacts !== 'Error') {
+            vm.contacts = contacts;
+        }
+        console.log('data: ', contacts)
     }
 
-    function getDataFailed(error) {
-        console.log('XHR Failed for load Profile.' + error.data);
-    }
 }

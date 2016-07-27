@@ -1,8 +1,7 @@
-<div class="contact" data-ng-controller="ContactController as vm">
-    <h2 class="sectionTitle">E-mail</h2>
-    <p class="sectionText">onisdel.echavarria@towersoft.net</p>
-    <h2 class="sectionTitle">GitHub</h2>
-    <p class="sectionText">onisdel85</p>
-    <h2 class="sectionTitle">Linkedin</h2>
-    <p class="sectionText"><a href="https://www.linkedin.com/in/onisdel-echavarria-carmenates-2318486b">Onisdel Echavarria Carmenates</a></p>
+<div class="contact" data-ng-controller="ContactController as vm" data-ng-init="vm.loadContacts()">
+    <div class="contactCtn" data-ng-repeat="contact in vm.contacts">
+        <h2 class="sectionTitle">{{contact.name}}</h2>
+        <p data-ng-if="contact.link == ''" class="sectionText">{{contact.description}}</p>
+        <p data-ng-if="contact.link !==''" ><a ng-href="{{contact.link}}" target="_blank">{{contact.description}}</a></p>
+    </div>
 </div>

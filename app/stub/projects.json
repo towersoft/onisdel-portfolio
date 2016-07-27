@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Fidbond plataform",
+    "description": "Fidbond is a application of marketing. My rol in this projects was fronted and backend developer. We used many technologies as javascript, Angular v1.4, Bootstrap v3.3 to fronted and nodejs, mongoDB to backend, all these technologies integrated with Mean.io framework."
+  },
+  {
+    "name": "SFE2",
+    "description": "SFE is a application developed by Levatas and towersoft group, property of HSBC. My rol in this projects was fronted developer with Dojov1.10 and css."
+  },
+  {
+    "name": "Account servicing",
+    "description": "Account servicing is a group applications developed by Levatas and towersoft group, property of HSBC. My rol in this projects was fronted developer with Dojo v1.10 and css technologies."
+  },
+  {
+    "name": "CCAS",
+    "description": "CCAS is a group applications developed by Levatas and towersoft group, property of HSBC. My rol in this projects was fronted developer with Dojo v1.10 and css technologies."
+  },
+  {
+    "name": "MCAP",
+    "description": "MCAP is a appointment system developed by Levatas and towersoft group, property of My rol in this projects was fronted developer with Dojo v1.10 and css technologies"
+  }
+]
