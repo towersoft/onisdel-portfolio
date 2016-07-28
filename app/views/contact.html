@@ -1,4 +1,4 @@
-<div class="contact" data-ng-controller="ContactController as vm" data-ng-init="vm.loadContacts()">
+<div class="contact" data-ng-init="vm.loadContacts()">
     <div class="contactCtn" data-ng-repeat="contact in vm.contacts">
         <h2 class="sectionTitle">{{contact.name}}</h2>
         <p data-ng-if="contact.link == ''" class="sectionText">{{contact.description}}</p>

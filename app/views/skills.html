@@ -1,4 +1,4 @@
-<div class="skills" ng-controller="SkillsController as vm" data-ng-init="vm.loadSkills()">
+<div class="skills" data-ng-init="vm.loadSkills()">
     <div class="skillCtn" data-ng-repeat="skill in vm.skills">
         <h2 class="sectionTitle">{{skill.name}}</h2>
         <p class="sectionText">{{skill.level}}</p>
