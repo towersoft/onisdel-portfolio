@@ -1,12 +1,20 @@
 'use strict';
 
-angular.module("portafolio.routes",['ngRoute']).config(config);
-function config($routeProvider, $locationProvider) {
+angular.module("portafolio.routes", ['ngRoute']).config(config);
+function config($routeProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider) {
+    $translateProvider.useMissingTranslationHandlerLog({
+        prefix: 'resources/locale-',// path to translations files
+        suffix: '.json'// suffix, currently- extension of the translations
+    });
+    $translateProvider.preferredLanguage('en_US');// is applied on first load
+    //$translateProvider.useLocalStorage();// saves selected language to localStorage
+    tmhDynamicLocaleProvider.localeLocationPattern('lib/angular-i18n/angular-locale_{{locale}}.js');
+
     $locationProvider.hashPrefix('!');
-   // $locationProvider.html5Mode({
-   //     enabled:true,
-   //     requireBase:true
-   // });
+    // $locationProvider.html5Mode({
+    //     enabled:true,
+    //     requireBase:true
+    // });
     $routeProvider
         .when('/contact', {
             templateUrl: 'views/contact.html',
