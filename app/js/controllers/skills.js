@@ -4,7 +4,7 @@ angular.module("portafolio.skills",[]).controller('SkillsController', SkillsCont
 SkillsController.$inject = ['DataService'];
 function SkillsController(DataService) {
     var vm = this;
-    vm.skills = {};
+    vm.skills = [];
     vm.loadSkills = loadSkills;
 
     function loadSkills() {

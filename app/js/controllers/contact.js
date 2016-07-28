@@ -5,7 +5,7 @@ ContactController.$inject = ['DataService'];
 function ContactController(DataService) {
 
     var vm = this;
-    vm.contacts = {};
+    vm.contacts =[];
     vm.loadContacts = loadContacts;
 
     function loadContacts() {
@@ -19,5 +19,4 @@ function ContactController(DataService) {
         }
         console.log('data: ', contacts)
     }
-
 }

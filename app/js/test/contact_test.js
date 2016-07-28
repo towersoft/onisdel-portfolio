@@ -1,40 +1,35 @@
 'use strict';
 
-describe('ContactController', function() {
+describe('ContactController', function () {
     beforeEach(module('portafolio.contacts'));
     beforeEach(module('portafolio.services'));
 
-    var $controller;
-
-    beforeEach(inject(function(_$controller_){
+    var $controller, $dataService, httpBackend, ctrl;
+    beforeEach(inject(function (_$controller_, _DataService_, _$httpBackend_) {
         // The injector unwraps the underscores (_) from around the parameter names when matching
         $controller = _$controller_;
-    }));
+        $dataService = _DataService_;
+        httpBackend = _$httpBackend_;
 
-    describe('unit test', function() {
-        it('controller is defined', function() {
-            var vm = {};
-            var controller = $controller('ContactController', { vm: vm });
-            vm.contacts = [{name: 'a'}];
-            expect(vm.contacts.length).toEqual(1);
+        ctrl = $controller('ContactController', {
+            DataService: $dataService
         });
-
+        ctrl.dataService = $dataService
+    }));
+    it('test controller is defined', function () {
+        expect(ctrl).toBeDefined();
     });
-
-
+    it('test loadContacts', function () {
+        httpBackend.whenGET('stub/contacts.json').respond({
+            data: {
+                profile: {
+                    name: 'Onisdel'
+                }
+            }
+        });
+        ctrl.dataService.loadContacts().then(function (resp) {
+            expect(resp.data.profile.name).toEqual("Onisdel");
+        });
+        httpBackend.flush();
+    });
 });
-
-//describe('portafolio.contact module', function() {
-//
-//    beforeEach(module('portafolio.contact'));
-//
-//    describe('view1 controller', function(){
-//
-//        it('should ....', inject(function($controller) {
-//            //spec body
-//            var view1Ctrl = $controller('ContactController');
-//            expect(view1Ctrl).toBeDefined();
-//        }));
-//
-//    });
-//});
