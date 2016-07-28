@@ -1,15 +1,25 @@
 'use strict';
 
-angular.module("portafolio.routes", ['ngRoute']).config(config);
-function config($routeProvider, $locationProvider, $translateProvider, tmhDynamicLocaleProvider) {
-    $translateProvider.useMissingTranslationHandlerLog({
-        prefix: 'resources/locale-',// path to translations files
-        suffix: '.json'// suffix, currently- extension of the translations
-    });
-    $translateProvider.preferredLanguage('en_US');// is applied on first load
-    //$translateProvider.useLocalStorage();// saves selected language to localStorage
-    tmhDynamicLocaleProvider.localeLocationPattern('lib/angular-i18n/angular-locale_{{locale}}.js');
+angular.module("portafolio.routes", ['ngRoute', 'i18ng', 'ngSanitize']).config(['$i18ngProvider',config]);
+function config($routeProvider, $locationProvider, $i18ngProvider) {
+    //$translateProvider.useMissingTranslationHandlerLog({
+    //    prefix: 'resources/locale-',// path to translations files
+    //    suffix: '.json'// suffix, currently- extension of the translations
+    //});
+    //$translateProvider.preferredLanguage('en_US');// is applied on first load
+    ////$translateProvider.useLocalStorage();// saves selected language to localStorage
+    //tmhDynamicLocaleProvider.localeLocationPattern('lib/angular-i18n/angular-locale_{{locale}}.js');
 
+   // $i18nextProvider.i18next = require('i18next');
+   //
+   // $i18nextProvider.options = {
+   //     lng: 'es',
+   //     useCookie: false,
+   //     useLocalStorage: false,
+   //     fallbackLng: 'dev',
+   //     resGetPath: '/locales/__lng__/__ns__.json',
+   //     defaultLoadingValue: '' // ng-i18next option, *NOT* directly supported by i18next
+   // }
     $locationProvider.hashPrefix('!');
     // $locationProvider.html5Mode({
     //     enabled:true,
