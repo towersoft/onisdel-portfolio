@@ -1,7 +1,14 @@
 'use strict';
 
 angular.module("portafolio.routes", ['ngRoute']).config(config);
-function config($routeProvider, $locationProvider) {
+function config($routeProvider, $locationProvider, $translateProvider, localStorageServiceProvider) {
+    $translateProvider.useStaticFilesLoader({
+        'prefix': 'resourses/locale-',
+        'suffix': '.json'
+    });
+    $translateProvider.useSanitizeValueStrategy(null);
+
+    localStorageServiceProvider.setPrefix('training');
     $locationProvider.hashPrefix('!');
     // $locationProvider.html5Mode({
     //     enabled:true,

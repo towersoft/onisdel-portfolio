@@ -1,4 +1,6 @@
 <div class="contact" data-ng-init="vm.loadContacts()">
+    <h1 translate>title</h1>
+    <pepe></pepe>
     <div class="contactCtn" data-ng-repeat="contact in vm.contacts">
         <h2 class="sectionTitle">{{contact.name}}</h2>
         <p data-ng-if="contact.link == ''" class="sectionText">{{contact.description}}</p>

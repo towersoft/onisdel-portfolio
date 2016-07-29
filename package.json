@@ -17,7 +17,7 @@
   },
   "scripts": {
     "prestart": "npm run build-css",
-    "start": "http-server -a localhost -p 3000 -c-1 ./app npm",
+    "start": "http-server -a localhost -p 4000 -c-1 ./app npm",
     "build-css": "node-sass --include-path scss scss/main.scss app/css/main.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "test": "karma start karma.conf.js",

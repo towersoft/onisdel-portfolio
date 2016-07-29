@@ -8,6 +8,10 @@ function ContactController(DataService) {
     vm.contacts =[];
     vm.loadContacts = loadContacts;
 
+    //function toggleLanguage (lang) {
+    //    $translate.use(lang);
+    //    localStorageService.set("lang", lang);
+    //};
     function loadContacts() {
         DataService.loadContacts()
             .then(getDataComplete);

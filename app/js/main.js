@@ -1,5 +1,8 @@
 'use strict';
 angular.module('portafolio', [
+    'pascalprecht.translate',
+    'ngCookies',
+    'LocalStorageModule',
     'portafolio.localeService',
     'portafolio.languageSelect',
     'portafolio.services',
@@ -9,9 +12,9 @@ angular.module('portafolio', [
     'portafolio.skills',
     'portafolio.contacts'
 ]).constant('LOCALES', {
-    'locales': {
-        'es_ES': 'Español',
-        'en_US': 'English'
-    },
+    'locales': [
+        {'lang': 'es_ES', 'name': 'Español'},
+        {'lang': 'en_US', 'name': 'English'}
+    ],
     'preferredLocale': 'en_US'
 });

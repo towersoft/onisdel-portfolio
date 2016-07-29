@@ -78,6 +78,66 @@ body {
   .skills{
     text-align: center;
   }
+  .open>.dropdown-menu {
+    display: block;
+  }
+    span.languagesCtn {
+      display: inline;
+      position: absolute;
+      li {
+        display: list-item;
+        margin-right: 0;
+      }
+    }
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 13px;
+    text-align: left;
+    background-color: #edecec;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+
+    .divider {
+      height: 1px;
+      margin: 8px 0;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+    li{
+      a{
+        display: block;
+        padding: 3px 20px;
+        clear: both;
+        font-weight: normal;
+        line-height: 1.42857143;
+        color: #333333;
+        white-space: nowrap;
+      }
+      a:hover,
+      a:focus {
+        text-decoration: none;
+        color: #333333;
+        background-color: rgba(0, 0, 0, 0.075);
+      }
+    }
+  }
+  .dropdown-menu.pull-right {
+    right: 0;
+    left: auto;
+    top: 10px;
+  }
 }
 
 @media (min-width: 768px) {

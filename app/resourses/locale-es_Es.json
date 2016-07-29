@@ -1,4 +1,5 @@
 {
-  "views.main.Splendid!": "Splendido!",
+  "title": "Título",
+  "views.main.Splendid!": "Esplendido!",
   "directives.language-select.Language": "Lenguaje"
 }

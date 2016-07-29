@@ -1,4 +1,4 @@
-<div ng-controller="HeaderController as vm" data-ng-init="">
+<div ng-controller="HeaderController as vm" data-ng-init="vm.visible = true">
     <div class="headerSection">
         <div class="row">
             <div class="col-sm-6 col-xs-12">
@@ -6,6 +6,7 @@
             </div>
             <div class="col-sm-6 col-xs-12">
                 <ul class="menu">
+                    <li><select-language></select-language></li>
                     <li><a href="#!//home">Home</a></li>
                     <li><a href="#!/projects">Projects</a></li>
                     <li><a href="#!/skills">Skills</a></li>
@@ -15,6 +16,5 @@
         </div>
     </div>
     <div class="contentSection">
-        <div ng-translate-language-select></div>
     </div>
 </div>
